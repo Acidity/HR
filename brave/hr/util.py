@@ -18,7 +18,7 @@ log = __import__('logging').getLogger(__name__)
 
 class StartupMixIn(object):
     def __init__(self):
-        from brave.jabber import util
+        from brave.hr import util
         
         # Configure mail delivery services.
         util.mail = Mailer(config, 'mail')

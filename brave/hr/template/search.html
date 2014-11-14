@@ -1,0 +1,24 @@
+## encoding: utf-8
+
+<%inherit file="brave.hr.template.master"/>
+<%namespace name="f" file="brave.hr.template.filter"/>
+
+<%block name="title">BRAVE HR</%block>
+
+<div class="page-header">
+    <h1>BRAVE HR <small>So easy a caveman could do it.</small></h1>
+</div>
+
+<div class="span4">
+    <form method="GET" action="/search" id="search" class="form-inline">
+         <input name="character" type="text" placeholder="Character Name"/>
+         <input type="submit" name="submit" class="btn btn-default" value="Search"/>
+    </form>
+</div>
+
+% if not success and character:
+    Character ${character} not found
+% elif character:
+    ${character}: ${eligible}
+% endif
+

@@ -8,11 +8,15 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/"><strong>Brave</strong> <small>Jabber</small></a>
+            <a class="navbar-brand" href="/"><strong>Brave</strong> <small>HR</small></a>
         </div>
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
                 <li class="active"><a href="/">Home</a></li>
+                <% from brave.api.permission import Permission %>
+                % if web.user and Permission.set_grants_permission(web.user.tags, 'search'):
+                    <li class="active"><a href="/search">Search</a></li>
+                % endif
             </ul>
             
             % if web.user:

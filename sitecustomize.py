@@ -1,1 +1,1 @@
-import brave.jabber.service
+import brave.hr.service

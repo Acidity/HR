@@ -48,6 +48,6 @@ setup(
         
         
         entry_points={
-        'paste.global_paster_command': [ "startAuth = brave.jabber.shell:ShellCommand", ]
+        'paste.global_paster_command': [ "startAuth = brave.hr.shell:ShellCommand", ]
         },
     )

@@ -127,6 +127,6 @@ class ShellCommand(Command):
 
             try:
                 #shell.interact(banner)
-                import brave.jabber.service
+                import brave.hr.service
             finally:
                 paste.registry.restorer.restoration_end()
